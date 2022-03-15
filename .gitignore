@@ -1,8 +1,9 @@
-/build/
+.pio
+
+/build
 
 /.settings/
 /.cproject
 /.project
 /sdkconfig
 /sdkconfig.old
-/.vscode

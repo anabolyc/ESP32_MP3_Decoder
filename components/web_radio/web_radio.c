@@ -16,12 +16,12 @@
 #include "esp_system.h"
 #include "driver/gpio.h"
 
-#include "vector.h"
+#include "../vector/include/vector.h"
 #include "web_radio.h"
-#include "http.h"
-#include "url_parser.h"
-#include "controls.h"
-#include "playlist.h"
+#include "../http/include/http.h"
+#include "../url_parser/include/url_parser.h"
+#include "../controls/include/controls.h"
+#include "../playlist/include/playlist.h"
 
 #define TAG "web_radio"
 #define HDR_KV_BUFF_LEN 128

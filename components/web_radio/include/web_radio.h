@@ -8,8 +8,8 @@
 #ifndef INCLUDE_WEB_RADIO_H_
 #define INCLUDE_WEB_RADIO_H_
 
-#include "audio_player.h"
-#include "playlist.h"
+#include "../../audio_player/include/audio_player.h"
+#include "../../playlist/include/playlist.h"
 
 typedef struct {
 

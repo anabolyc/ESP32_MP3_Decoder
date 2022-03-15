@@ -15,7 +15,7 @@
 #include "lwip/netdb.h"
 #include "lwip/dns.h"
 
-#include "url_parser.h"
+#include "../url_parser/include/url_parser.h"
 #include "http.h"
 
 

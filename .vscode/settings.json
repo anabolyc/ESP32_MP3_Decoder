@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "vector.h": "c",
+        "ui.h": "c",
+        "audio_renderer.h": "c",
+        "ws2812.h": "c",
+        "fdk_aac_decoder.h": "c",
+        "url_parser.h": "c",
+        "esp_event_loop.h": "c"
+    }
+}

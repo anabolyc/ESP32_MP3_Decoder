@@ -23,7 +23,7 @@
 #include "http.h"
 #include "spiram_fifo.h"
 #include "spiram.h"
-#include "playerconfig.h"
+#include "../../include/playerconfig.h"
 
 #define SPIREADSIZE 64
 

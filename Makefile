@@ -16,3 +16,6 @@ sdkconfig: sdkconfig.defaults
 
 menuconfig: sdkconfig
 defconfig: sdkconfig
+
+test:
+	printenv

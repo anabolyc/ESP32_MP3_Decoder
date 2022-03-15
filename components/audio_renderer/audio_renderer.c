@@ -15,7 +15,7 @@
 #include "esp_log.h"
 #include "driver/gpio.h"
 #include "driver/i2s.h"
-#include "MerusAudio.h"
+#include "../MerusAudio/include/MerusAudio.h"
 
 #include "audio_player.h"
 #include "audio_renderer.h"

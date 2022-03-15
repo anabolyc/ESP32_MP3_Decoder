@@ -3,6 +3,8 @@
  *
  *  Created on: 12.03.2017
  *      Author: michaelboeckling
+ *  Modified on 04.05.2021
+ *          by: andriy@malyshenko.com
  */
 
 #include <stdlib.h>
@@ -14,11 +16,12 @@
 
 #include "esp_system.h"
 #include "esp_log.h"
+#include "ui.h"
 
-#include "fdk_aac_decoder.h"
-#include "libfaad_decoder.h"
-#include "mp3_decoder.h"
-#include "controls.h"
+#include "../fdk-aac_decoder/include/fdk_aac_decoder.h"
+#include "../libfaad_decoder/include/libfaad_decoder.h"
+#include "../mp3_decoder/include/mp3_decoder.h"
+#include "../controls/include/controls.h"
 
 #define TAG "audio_player"
 #define PRIO_MAD configMAX_PRIORITIES - 2
@@ -112,6 +115,7 @@ int audio_stream_consumer(const char *recv_buf, ssize_t bytes_read,
     t = (t + 1) & 255;
     if (t == 0) {
         ESP_LOGI(TAG, "Buffer fill %u%%, %d bytes", fill_level, bytes_in_buf);
+        ui_queue_event((ui_event_t){ UI_PLAYER_BUFF_PCT, fill_level });
     }
 
     return 0;
@@ -121,25 +125,28 @@ void audio_player_init(player_t *player)
 {
     player_instance = player;
     player_status = INITIALIZED;
+    ui_queue_event((ui_event_t){ UI_PLAYER_INIT });
 }
 
 void audio_player_destroy()
 {
     renderer_destroy();
     player_status = UNINITIALIZED;
+    ui_queue_event((ui_event_t){ UI_PLAYER_UNINIT });
 }
 
 void audio_player_start()
 {
     renderer_start();
     player_status = RUNNING;
+    ui_queue_event((ui_event_t){ UI_PLAYER_RUNNING });
 }
 
 void audio_player_stop()
 {
     renderer_stop();
     player_instance->command = CMD_STOP;
-    // player_status = STOPPED;
+    ui_queue_event((ui_event_t){ UI_PLAYER_STOPPED });
 }
 
 component_status_t get_player_status()

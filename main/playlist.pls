@@ -1,10 +1,14 @@
 [playlist]
-NumberOfEntries=4
-Title1=SomaFM / Illinois Street Lounge
-File1=http://ice1.somafm.com/illstreet-128-mp3
-Title2=SomaFM / Secret Agent
-File2=http://ice1.somafm.com/secretagent-128-mp3
-Title3=SomaFM / Left Coast 70s
-File3=http://ice1.somafm.com/seventies-128-mp3
-Title4=SomaFM / Boot Liquor
-File4=http://ice1.somafm.com/bootliquor-128-mp3
+NumberOfEntries=6
+Title1=BBC One Fabio & Grooverider Radio Show
+File1=http://51.144.137.103:18000/fg
+Title2=BBC One Essential Mix  Radio Show
+File2=http://51.144.137.103:18000/em
+Title3=BBC Annie Nightingale
+File3=http://51.144.137.103:18000/an
+Title3=BBC Mary Anne Hobbs
+File3=http://51.144.137.103:18000/mah
+Title4=Transmission Radio Show
+File4=http://51.144.137.103:18000/jd
+Title5=John B Podcast
+File5=http://51.144.137.103:18000/jb

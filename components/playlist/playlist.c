@@ -16,7 +16,7 @@
 #include "common_utils.h"
 #include "vector.h"
 #include "playlist.h"
-#include "ini.h"
+#include "../inih_port/inih/ini.h"
 
 #ifndef min
    #define min(x,y) ((x)<(y)?(x):(y))

@@ -12,8 +12,8 @@
 #include "esp_event_loop.h"
 #include "esp_log.h"
 
-#include "playerconfig.h"
-#include "wifi.h"
+#include "../include/playerconfig.h"
+#include "../include/wifi.h"
 
 #define TAG "wifi"
 

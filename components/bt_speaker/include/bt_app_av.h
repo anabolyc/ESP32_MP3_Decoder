@@ -10,8 +10,8 @@
 #define __BT_APP_AV_H__
 
 #include <stdint.h>
-#include "esp_a2dp_api.h"
-#include "esp_avrc_api.h"
+#include <esp_a2dp_api.h>
+#include <esp_avrc_api.h>
 
 #define BT_AV_TAG               "BT_AV"
 
